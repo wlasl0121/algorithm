@@ -13,7 +13,7 @@ function solution(n, lost, reserve) {
 
     reserve_set.map((value) => {
         for (var i = 0; i < lost_set.length; i++) {
-            if (lost_set[i] - value >= -1 && lost_set[i] - value <= 1) {
+            if (lost_set[i] - value === -1 || lost_set[i] - value === 1) {
                 lost_set.splice(i, 1);
                 i--; // 반복문 안에서 splice를 해줬기 때문에 i-- 를 해줘야 에러가 안난다.
                 break;
