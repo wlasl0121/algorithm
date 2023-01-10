@@ -1,3 +1,20 @@
+// js의 set과 has을 사용
+// const input = require("fs")
+//     .readFileSync("./백준/input.txt")
+//     .toString()
+//     .trim()
+//     .split("\n");
+
+// const [N, A, M, B] = input.map((v) => v.split(" "));
+
+// const array = new Set(A);
+
+// const result = B.map((v) => (array.has(v) ? 1 : 0));
+
+// console.log(result.join("\n"));
+
+// Binary Search 함수 직접 짠 코드
+
 var input = require("fs")
     .readFileSync("./백준/input.txt")
     .toString()
