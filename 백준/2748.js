@@ -9,22 +9,35 @@ var fn = new Array(91).fill(0);
 
 console.log(f(N).toString());
 
+/****** bottom-up 방식 ******/
 function f(n) {
-    if (n === 0) {
-        fn[0] = 0;
-        return fn[0];
-    } else if (n === 1 || n === 2) {
-        fn[n] = 1;
-        return fn[n];
-    }
+    fn[1] = 1;
+    fn[2] = 1;
 
-    if (fn[n] !== 0) {
-        return fn[n];
+    for (var i = 3; i <= N; i++) {
+        fn[i] = BigInt(fn[i - 1]) + BigInt(fn[i - 2]);
     }
-    fn[n] = BigInt(f(n - 1)) + BigInt(f(n - 2));
 
     return fn[n];
 }
+
+/****** top-down 방식 ******/
+// function f(n) {
+//     if (n === 0) {
+//         fn[0] = 0;
+//         return fn[0];
+//     } else if (n === 1 || n === 2) {
+//         fn[n] = 1;
+//         return fn[n];
+//     }
+
+//     if (fn[n] !== 0) {
+//         return fn[n];
+//     }
+//     fn[n] = BigInt(f(n - 1)) + BigInt(f(n - 2));
+
+//     return fn[n];
+// }
 
 /**
  * 회고록 :
