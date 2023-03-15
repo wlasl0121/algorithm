@@ -13,8 +13,8 @@ let str = require("fs")
 
 JSON.parse(input).map((v, index) => {
     // console.log(v);
-    // if (v.toString() !== str[index]) {
-    if (v !== str[index]) {
+    if (v.toString() !== str[index]) {
+        // if (v !== str[index]) {
         console.log(index, " : 틀렸습니다");
         return;
     }
