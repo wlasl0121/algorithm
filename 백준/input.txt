@@ -1,2 +1,4 @@
-50
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+3 4 0
+64 64 64 64
+64 64 64 64
+64 64 64 63
