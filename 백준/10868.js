@@ -37,7 +37,7 @@ function find(start, end, node, left, right) {
         find(mid + 1, end, node * 2 + 1, left, right)
     );
 }
-// console.log(tree);
+console.log(tree);
 let answer = [];
 for (let i = N; i < N + M; i++) {
     let [a, b] = input[i].split(" ").map((v) => Number(v));
